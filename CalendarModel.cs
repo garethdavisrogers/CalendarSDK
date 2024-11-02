@@ -64,15 +64,18 @@ namespace CalendarSDK
 
         public void PreviousMonth()
         {
-            Today = Today.AddMonths(-1);
+            // Set to the first day of the month after calculating the previous month
+            Today = new DateTime(Today.Year, Today.Month, 1).AddMonths(-1);
             Weeks = GenerateWeeks(Today.Year, Today.Month);
         }
 
         public void NextMonth()
         {
-            Today = Today.AddMonths(1);
+            // Set to the first day of the month after calculating the next month
+            Today = new DateTime(Today.Year, Today.Month, 1).AddMonths(1);
             Weeks = GenerateWeeks(Today.Year, Today.Month);
         }
+
     }
 
     public class CalendarDay
