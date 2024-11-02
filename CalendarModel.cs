@@ -25,49 +25,7 @@ namespace CalendarSDK
             Weeks = GenerateWeeks(Today.Year, Today.Month);
         }
 
-        // Method to move to the previous day
-        public void PreviousDay()
-        {
-            Today = Today.AddDays(-1);
-            UpdateWeeksIfMonthChanged();
-        }
-
-        // Method to move to the next day
-        public void NextDay()
-        {
-            Today = Today.AddDays(1);
-            UpdateWeeksIfMonthChanged();
-        }
-
-        // Method to move to the previous week
-        public void PreviousWeek()
-        {
-            Today = Today.AddDays(-7);
-            UpdateWeeksIfMonthChanged();
-        }
-
-        // Method to move to the next week
-        public void NextWeek()
-        {
-            Today = Today.AddDays(7);
-            UpdateWeeksIfMonthChanged();
-        }
-
-        // Method to move to the previous month
-        public void PreviousMonth()
-        {
-            Today = Today.AddMonths(-1);
-            Weeks = GenerateWeeks(Today.Year, Today.Month);
-        }
-
-        // Method to move to the next month
-        public void NextMonth()
-        {
-            Today = Today.AddMonths(1);
-            Weeks = GenerateWeeks(Today.Year, Today.Month);
-        }
-
-        // Generate weeks for any given month and year
+        // Generate weeks for any given month and year, ensuring 6 rows for a complete month view
         public List<List<CalendarDay>> GenerateWeeks(int year, int month)
         {
             var weeks = new List<List<CalendarDay>>();
@@ -76,9 +34,9 @@ namespace CalendarSDK
             DateTime startDay = GetStartingSunday(firstDayOfMonth);
 
             DateTime currentDay = startDay;
-            int daysInMonth = DateTime.DaysInMonth(year, month);
 
-            while (weeks.Count < 6 && (currentDay.Month == month || currentDay < firstDayOfMonth.AddMonths(1)))
+            // Generate up to 6 weeks (42 days) to cover any layout
+            for (int i = 0; i < 42; i++)
             {
                 days.Add(new CalendarDay { Date = currentDay });
 
@@ -87,6 +45,7 @@ namespace CalendarSDK
                     weeks.Add(days);
                     days = new List<CalendarDay>();
                 }
+
                 currentDay = currentDay.AddDays(1);
             }
 
@@ -101,15 +60,6 @@ namespace CalendarSDK
                 startDay = startDay.AddDays(-1);
             }
             return startDay;
-        }
-
-        // Helper method to update weeks if the month has changed
-        private void UpdateWeeksIfMonthChanged()
-        {
-            if (Today.Month != Weeks[2][0].Date.Month) // Check a middle week day to detect month change
-            {
-                Weeks = GenerateWeeks(Today.Year, Today.Month);
-            }
         }
     }
 

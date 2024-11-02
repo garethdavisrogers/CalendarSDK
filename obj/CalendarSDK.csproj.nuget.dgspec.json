@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gareth\\source\\repos\\ViceTracker\\CalendarSDK\\CalendarSDK.csproj": {}
+    "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\CalendarSDK.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gareth\\source\\repos\\ViceTracker\\CalendarSDK\\CalendarSDK.csproj": {
+    "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\CalendarSDK.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gareth\\source\\repos\\ViceTracker\\CalendarSDK\\CalendarSDK.csproj",
+        "projectUniqueName": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\CalendarSDK.csproj",
         "projectName": "CalendarSDK",
-        "projectPath": "C:\\Users\\Gareth\\source\\repos\\ViceTracker\\CalendarSDK\\CalendarSDK.csproj",
+        "projectPath": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\CalendarSDK.csproj",
         "packagesPath": "C:\\Users\\Gareth\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gareth\\source\\repos\\ViceTracker\\CalendarSDK\\obj\\",
+        "outputPath": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -28,6 +28,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/garethdavisrogers/index.json": {},
           "https://nuget.pkg.github.com/mpinkus/index.json": {}
         },
         "frameworks": {
@@ -44,9 +45,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
