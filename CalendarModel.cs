@@ -7,8 +7,29 @@ public class CalendarModel
     public DateTime Today { get; private set; } = DateTime.Today;
     public List<List<CalendarDay>> Weeks { get; private set; }
 
+    // Property for the first day of the current month
+    public DateTime FirstDayOfCurrentMonth => new DateTime(Today.Year, Today.Month, 1);
+
+    // Property for the last day of the current month
+    public DateTime LastDayOfCurrentMonth => new DateTime(Today.Year, Today.Month, DateTime.DaysInMonth(Today.Year, Today.Month));
+
+    // Property for the closest previous or same Sunday relative to the first day of the current month
+    public DateTime ClosestSunday
+    {
+        get
+        {
+            DateTime closestSunday = FirstDayOfCurrentMonth;
+            while (closestSunday.DayOfWeek != DayOfWeek.Sunday)
+            {
+                closestSunday = closestSunday.AddDays(-1);
+            }
+            return closestSunday;
+        }
+    }
+
     public CalendarModel(int year, int month)
     {
+        Today = new DateTime(year, month, 1);
         Weeks = GenerateWeeks(year, month);
     }
 
@@ -17,18 +38,11 @@ public class CalendarModel
         var weeks = new List<List<CalendarDay>>();
         var days = new List<CalendarDay>();
 
-        // Start with the first day of the month
-        DateTime firstDayOfMonth = new DateTime(year, month, 1);
-
-        // Shift back to the previous Sunday if needed
-        DateTime currentDay = firstDayOfMonth;
-        while (currentDay.DayOfWeek != DayOfWeek.Sunday)
-        {
-            currentDay = currentDay.AddDays(-1);
-        }
+        // Start with the closest previous or same Sunday
+        DateTime currentDay = ClosestSunday;
 
         // Generate days and weeks until we reach the end of the month view
-        DateTime lastDayOfMonth = new DateTime(year, month, DateTime.DaysInMonth(year, month));
+        DateTime lastDayOfMonth = LastDayOfCurrentMonth;
         while (currentDay <= lastDayOfMonth || days.Count > 0)
         {
             days.Add(new CalendarDay { Date = currentDay });
@@ -43,7 +57,7 @@ public class CalendarModel
             currentDay = currentDay.AddDays(1);
         }
 
-        // If there are remaining days after the last week, fill up to 7 days
+        // Fill the last week if it's not complete
         while (days.Count > 0 && days.Count < 7)
         {
             days.Add(new CalendarDay { Date = currentDay });
