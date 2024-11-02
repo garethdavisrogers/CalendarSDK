@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F8C5AD81-909E-40F0-8EC8-854A53C4291F}|CalendarSDK.csproj|c:\\users\\gareth\\source\\repos\\nugets\\calendarsdk\\calendarmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8C5AD81-909E-40F0-8EC8-854A53C4291F}|CalendarSDK.csproj|solutionrelative:calendarmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8C5AD81-909E-40F0-8EC8-854A53C4291F}|CalendarSDK.csproj|c:\\users\\gareth\\source\\repos\\nugets\\calendarsdk\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{F8C5AD81-909E-40F0-8EC8-854A53C4291F}|CalendarSDK.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F8C5AD81-909E-40F0-8EC8-854A53C4291F}|CalendarSDK.csproj|c:\\users\\gareth\\source\\repos\\nugets\\calendarsdk\\calendarsdk.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{F8C5AD81-909E-40F0-8EC8-854A53C4291F}|CalendarSDK.csproj|solutionrelative:calendarsdk.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8C5AD81-909E-40F0-8EC8-854A53C4291F}|CalendarSDK.csproj|c:\\users\\gareth\\source\\repos\\nugets\\calendarsdk\\calendarmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8C5AD81-909E-40F0-8EC8-854A53C4291F}|CalendarSDK.csproj|solutionrelative:calendarmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,38 +54,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-02T17:40:36.728Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "CalendarSDK.csproj",
               "DocumentMoniker": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\CalendarSDK.csproj",
               "RelativeDocumentMoniker": "CalendarSDK.csproj",
               "ToolTip": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\CalendarSDK.csproj",
               "RelativeToolTip": "CalendarSDK.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-02T17:35:10.791Z"
+              "WhenOpened": "2024-11-02T17:35:10.791Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CalendarModel.cs",
               "DocumentMoniker": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\CalendarModel.cs",
               "RelativeDocumentMoniker": "CalendarModel.cs",
               "ToolTip": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\CalendarModel.cs",
               "RelativeToolTip": "CalendarModel.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAADwv04AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAADwv2AAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-02T17:32:29.82Z",
               "EditorCaption": ""
