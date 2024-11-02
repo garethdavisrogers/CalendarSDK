@@ -22,52 +22,51 @@ namespace CalendarSDK
             var weeks = new List<List<CalendarDay>>();
             var days = new List<CalendarDay>();
 
-            // Find the first and last day of the month
+            // Start from the last Sunday before or on the first day of the month
             DateTime firstDayOfMonth = new DateTime(year, month, 1);
-            DateTime lastDayOfMonth = new DateTime(year, month, DateTime.DaysInMonth(year, month));
-
-            // Calculate the starting day (the last Sunday before or on the first day of the month)
             DateTime startDay = firstDayOfMonth;
             while (startDay.DayOfWeek != DayOfWeek.Sunday)
             {
                 startDay = startDay.AddDays(-1);
             }
 
-            // Start from the beginning of the grid, fill weeks until we've covered all days in the month
-            DateTime currentDay = startDay;
-            while (weeks.Count < 6) // Ensure a maximum of 6 weeks
+            // End on the first Saturday after or on the last day of the month
+            DateTime lastDayOfMonth = new DateTime(year, month, DateTime.DaysInMonth(year, month));
+            DateTime endDay = lastDayOfMonth;
+            while (endDay.DayOfWeek != DayOfWeek.Saturday)
             {
-                days.Add(new CalendarDay { Date = currentDay });
-
-                if (days.Count == 7) // Complete the current week
-                {
-                    weeks.Add(days);
-                    days = new List<CalendarDay>();
-                }
-
-                // Stop adding weeks once we have captured all days up to the end of the month, ensuring a minimum of 4 weeks
-                if (currentDay >= lastDayOfMonth && weeks.Count >= 4)
-                {
-                    break;
-                }
-
-                // Move to the next day
-                currentDay = currentDay.AddDays(1);
+                endDay = endDay.AddDays(1);
             }
 
-            // Add an extra week if needed to reach 6 weeks in total for visual consistency
-            while (weeks.Count < 6)
+            // Populate the calendar with days from startDay to endDay inclusive
+            DateTime currentDay = startDay;
+            while (currentDay <= endDay)
             {
                 days.Add(new CalendarDay { Date = currentDay });
+
+                // When a week is completed, add it to weeks and reset the days list
                 if (days.Count == 7)
                 {
                     weeks.Add(days);
                     days = new List<CalendarDay>();
                 }
+
                 currentDay = currentDay.AddDays(1);
             }
 
             return weeks;
+        }
+
+        public void PreviousMonth()
+        {
+            Today = Today.AddMonths(-1);
+            Weeks = GenerateWeeks(Today.Year, Today.Month);
+        }
+
+        public void NextMonth()
+        {
+            Today = Today.AddMonths(1);
+            Weeks = GenerateWeeks(Today.Year, Today.Month);
         }
     }
 
