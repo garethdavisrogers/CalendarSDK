@@ -1,0 +1,12 @@
+C:\Users\Gareth\source\repos\nugets\CalendarSDK\bin\Debug\net8.0\CalendarSDK.deps.json
+C:\Users\Gareth\source\repos\nugets\CalendarSDK\bin\Debug\net8.0\CalendarSDK.dll
+C:\Users\Gareth\source\repos\nugets\CalendarSDK\bin\Debug\net8.0\CalendarSDK.pdb
+C:\Users\Gareth\source\repos\nugets\CalendarSDK\obj\Debug\net8.0\CalendarSDK.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gareth\source\repos\nugets\CalendarSDK\obj\Debug\net8.0\CalendarSDK.AssemblyInfoInputs.cache
+C:\Users\Gareth\source\repos\nugets\CalendarSDK\obj\Debug\net8.0\CalendarSDK.AssemblyInfo.cs
+C:\Users\Gareth\source\repos\nugets\CalendarSDK\obj\Debug\net8.0\CalendarSDK.csproj.CoreCompileInputs.cache
+C:\Users\Gareth\source\repos\nugets\CalendarSDK\obj\Debug\net8.0\CalendarSDK.sourcelink.json
+C:\Users\Gareth\source\repos\nugets\CalendarSDK\obj\Debug\net8.0\CalendarSDK.dll
+C:\Users\Gareth\source\repos\nugets\CalendarSDK\obj\Debug\net8.0\refint\CalendarSDK.dll
+C:\Users\Gareth\source\repos\nugets\CalendarSDK\obj\Debug\net8.0\CalendarSDK.pdb
+C:\Users\Gareth\source\repos\nugets\CalendarSDK\obj\Debug\net8.0\ref\CalendarSDK.dll

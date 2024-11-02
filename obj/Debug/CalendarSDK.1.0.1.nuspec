@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CalendarSDK</id>
+    <version>1.0.1</version>
+    <authors>Your Name</authors>
+    <description>A calendar SDK for date navigation and management.</description>
+    <tags>Calendar SDK Date</tags>
+    <repository type="git" url="https://github.com/garethdavisrogers/CalendarSDK" commit="971a2722d355f9a91968ca1a46a7e8ec7a8019d5" />
+    <dependencies>
+      <group targetFramework="net8.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Gareth\source\repos\nugets\CalendarSDK\bin\Debug\net8.0\CalendarSDK.dll" target="lib\net8.0\CalendarSDK.dll" />
+  </files>
+</package>
