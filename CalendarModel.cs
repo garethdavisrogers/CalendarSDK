@@ -5,61 +5,37 @@ using System.Linq;
 
 public class CalendarModel
 {
-    public DateTime Today { get; private set; }
-    public DateTime CurrentViewDate { get; private set; }  // Tracks the date displayed in the calendar view
-
-    public List<List<CalendarDay>> Weeks { get; private set; }
-    public List<string> DaysOfWeek { get; private set; }
-
-    public List<CalendarDay> CurrentWeek => Weeks.FirstOrDefault(week => week.Any(day => day.Date.Date == Today.Date)) ?? new List<CalendarDay>();
-
-    public CalendarDay CurrentDay => Weeks.SelectMany(week => week).FirstOrDefault(day => day.Date.Date == Today.Date) ?? new CalendarDay
-    {
-        Date = Today
-    };
-
-    public CalendarModel()
-    {
-        Today = DateTime.Today;
-        CurrentViewDate = Today;  // Initialize with today's month and year
-        DaysOfWeek = new List<string>(CultureInfo.CurrentCulture.DateTimeFormat.AbbreviatedDayNames);
-        Weeks = GenerateWeeks(CurrentViewDate.Year, CurrentViewDate.Month);
-    }
-
-    public void PreviousMonth()
-    {
-        CurrentViewDate = new DateTime(CurrentViewDate.Year, CurrentViewDate.Month, 1).AddMonths(-1); // Move to the first of the previous month
-        Weeks = GenerateWeeks(CurrentViewDate.Year, CurrentViewDate.Month);
-    }
-
-    public void NextMonth()
-    {
-        CurrentViewDate = new DateTime(CurrentViewDate.Year, CurrentViewDate.Month, 1).AddMonths(1); // Move to the first of the next month
-        Weeks = GenerateWeeks(CurrentViewDate.Year, CurrentViewDate.Month);
-    }
-
     public List<List<CalendarDay>> GenerateWeeks(int year, int month)
     {
-        var weeks = new List<List<CalendarDay>>();
-        var days = new List<CalendarDay>();
+        List<List<CalendarDay>> weeks = new List<List<CalendarDay>>();
+        List<CalendarDay> days = new List<CalendarDay>();
 
+        // Get the first and last day of the current month
         DateTime firstDayOfMonth = new DateTime(year, month, 1);
         DateTime lastDayOfMonth = new DateTime(year, month, DateTime.DaysInMonth(year, month));
 
-        // Start from the last Sunday before the first day of the month
+        // Find the start day, which is the last Sunday before the first day of the month
         DateTime startDay = firstDayOfMonth;
         while (startDay.DayOfWeek != DayOfWeek.Sunday)
         {
             startDay = startDay.AddDays(-1);
         }
 
-        // Populate days from startDay to cover the month and reach at least the next Saturday
+        // Calculate the end day, which is the first Saturday after the last day of the month
+        DateTime endDay = lastDayOfMonth;
+        while (endDay.DayOfWeek != DayOfWeek.Saturday)
+        {
+            endDay = endDay.AddDays(1);
+        }
+
+        // Populate days from startDay to endDay
         DateTime currentDay = startDay;
-        while (weeks.Count < 6 || currentDay <= lastDayOfMonth)
+        while (currentDay <= endDay)
         {
             days.Add(new CalendarDay { Date = currentDay });
 
-            if (days.Count == 7) // Complete the week
+            // When a full week is reached, add it to weeks
+            if (days.Count == 7)
             {
                 weeks.Add(days);
                 days = new List<CalendarDay>();
@@ -68,8 +44,21 @@ public class CalendarModel
             currentDay = currentDay.AddDays(1);
         }
 
+        // Ensure a 5-6 week display format
+        while (weeks.Count < 6)
+        {
+            days = new List<CalendarDay>();
+            for (int i = 0; i < 7; i++)
+            {
+                days.Add(new CalendarDay { Date = currentDay });
+                currentDay = currentDay.AddDays(1);
+            }
+            weeks.Add(days);
+        }
+
         return weeks;
     }
+
 
     public class CalendarDay
     {
