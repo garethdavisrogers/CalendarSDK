@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A calendar SDK for date navigation and management.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.9.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.9+b95bf8c04e823a810877625cb99b99318a99c2dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.9+c4b5656bb79c2e0a6d716ba5b934efc5facac2dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("CalendarSDK")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CalendarSDK")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.9.0")]
