@@ -6,7 +6,7 @@
     <authors>Gareth</authors>
     <description>A calendar SDK for date navigation and management.</description>
     <tags>Calendar SDK Date</tags>
-    <repository type="git" url="https://github.com/garethdavisrogers/CalendarSDK" commit="c4b5656bb79c2e0a6d716ba5b934efc5facac2dd" />
+    <repository type="git" url="https://github.com/garethdavisrogers/CalendarSDK" commit="4503cba0094e5aed3bcfbaf8086bcc0dc86a3dfb" />
     <dependencies>
       <group targetFramework="net8.0" />
     </dependencies>
