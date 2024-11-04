@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F8C5AD81-909E-40F0-8EC8-854A53C4291F}|CalendarSDK.csproj|c:\\users\\gareth\\source\\repos\\nugets\\calendarsdk\\calendarsdk.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F8C5AD81-909E-40F0-8EC8-854A53C4291F}|CalendarSDK.csproj|solutionrelative:calendarsdk.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CalendarSDK",
+              "DocumentMoniker": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\CalendarSDK.csproj",
+              "RelativeDocumentMoniker": "CalendarSDK.csproj",
+              "ToolTip": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\CalendarSDK.csproj",
+              "RelativeToolTip": "CalendarSDK.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-04T19:03:59.995Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"

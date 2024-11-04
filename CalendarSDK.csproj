@@ -6,8 +6,8 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<!-- Generate package on build -->
 		<PackageId>CalendarSDK</PackageId>
-		<Version>1.0.8</Version>
-		<Authors>Your Name</Authors>
+		<Version>1.0.9</Version>
+		<Authors>Gareth</Authors>
 		<Company>Your Company</Company>
 		<Description>A calendar SDK for date navigation and management.</Description>
 		<PackageTags>Calendar SDK Date</PackageTags>
