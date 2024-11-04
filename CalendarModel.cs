@@ -48,7 +48,7 @@ public class CalendarModel
             days.Add(new CalendarDay { Date = currentDay });
 
             // When we have a full week, add it to weeks and reset days
-            if (days.Count == 7)
+            if (days.Count == 7 || currentDay == LastDayOfCurrentMonth)
             {
                 weeks.Add(new List<CalendarDay>(days));
                 days.Clear();
