@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\CalendarSDK.csproj": {
-      "version": "1.0.7",
+      "version": "1.0.8",
       "restore": {
         "projectUniqueName": "C:\\Users\\Gareth\\source\\repos\\nugets\\CalendarSDK\\CalendarSDK.csproj",
         "projectName": "CalendarSDK",
@@ -45,8 +45,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -67,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
